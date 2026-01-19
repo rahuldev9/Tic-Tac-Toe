@@ -16,7 +16,9 @@ import GameActions from "../components/GameActions";
 import GameBoard from "../components/GameBoard";
 import ChatWidget from "../components/ChatWidget";
 
-const socket = io("http://localhost:4000");
+const BACKENDURL = process.env.NEXT_PUBLIC_BACKENDURL;
+
+const socket = io(`${BACKENDURL}`);
 
 export default function StartPage() {
   const router = useRouter();

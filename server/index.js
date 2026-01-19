@@ -1,13 +1,18 @@
 const express = require("express");
+
 const http = require("http");
 const { Server } = require("socket.io");
+require("dotenv").config();
 
 const app = express();
 const server = http.createServer(app);
+const PORT = process.env.PORT || 4000;
+const BACKENDURL = process.env.BACKENDURL;
+const FRONTENDURL = process.env.NEXT_PUBLIC_FRONTEND_URL;
 
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:3000"], // Next.js dev
+    origin: [`${FRONTENDURL}`], // Next.js dev
     methods: ["GET", "POST"],
   },
 });
@@ -173,6 +178,6 @@ function checkWinner(roomId) {
 }
 
 /* ---------------- START SERVER ---------------- */
-server.listen(4000, () => {
-  console.log("Socket.IO server running on http://localhost:4000");
+server.listen(PORT, () => {
+  console.log(`Socket.IO server running on ${BACKENDURL}`);
 });
