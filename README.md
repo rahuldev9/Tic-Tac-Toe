@@ -20,12 +20,8 @@ Built with modern web technologies and designed for simplicity, performance, and
 
 - **Framework:** Next.js
 - **Language:** TypeScript / JavaScript
-- **UI:** React
-- **Styling:** CSS / Tailwind (optional)
+- **Styling:** CSS / Tailwind 
 - **SEO:** Open Graph, Twitter Cards, Schema.org
-- **Deployment:** Vercel / Netlify / Any Node hosting
+- **Deployment:** Vercel / render 
 
----
-
-## 📂 Project Structure
 
