@@ -16,7 +16,7 @@ import GameActions from "../components/GameActions";
 import GameBoard from "../components/GameBoard";
 import ChatWidget from "../components/ChatWidget";
 
-const socket = io("http://localhost:4000");
+const socket = io("https://tic-tac-toe-8u3y.onrender.com");
 
 export default function StartPage() {
   const router = useRouter();
