@@ -9,12 +9,20 @@ type User = {
   gender: string;
   image?: string;
 };
+type Props = {
+  gameStarted: boolean;
+  gameOver?: boolean;
+};
 
-export default function Nav() {
+export default function Nav({ gameStarted, gameOver }: Props) {
   const router = useRouter();
-
+  useEffect(() => {
+    if (gameStarted) {
+      setGamestarted(true);
+    }
+  }, [gameStarted]);
   const [auth, setAuth] = useState<User | null>(null);
-
+  const [Gamestarted, setGamestarted] = useState(false);
   const [showChangeName, setShowChangeName] = useState(false);
 
   const maleAvatar = "/male.png";
@@ -59,12 +67,14 @@ export default function Nav() {
             </div>
 
             {/* Leave Button */}
-            <button
-              onClick={leaveRoom}
-              className="rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-700 transition"
-            >
-              Leave
-            </button>
+            {Gamestarted && (
+              <button
+                onClick={leaveRoom}
+                className="rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-700 transition"
+              >
+                Leave
+              </button>
+            )}
           </>
         ) : (
           <div />

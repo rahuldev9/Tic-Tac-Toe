@@ -137,7 +137,7 @@ export default function StartPage() {
 
   return (
     <main className="min-h-screen bg-black text-white">
-      <Nav />
+      <Nav gameStarted={gameStarted} />
 
       {gameStarted && (
         <button
