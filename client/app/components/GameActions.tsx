@@ -14,7 +14,6 @@ type Props = {
 
 export default function GameActions({
   gameStarted,
-
   roomToJoin,
   roomCode,
   setRoomToJoin,
