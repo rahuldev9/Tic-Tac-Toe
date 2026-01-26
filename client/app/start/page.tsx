@@ -210,18 +210,14 @@ export default function StartPage() {
 
       <div className="mx-auto max-w-md px-4 py-6">
         {/* <GameHeader gameStarted={gameStarted} gameOver={gameOver} /> */}
-        {/* <VideoChat
-          socket={socket}
-          roomId={roomId}
-          isCreator={playerSymbol === "X"} // creator = X
-        /> */}
-        {gameStarted && (
+
+        {/* {gameStarted && (
           <>
             {" "}
             <VideoSender socket={socket} roomId={roomId} />
             <LiveViewer socket={socket} />
           </>
-        )}
+        )} */}
 
         <PlayersPanel
           players={players}
