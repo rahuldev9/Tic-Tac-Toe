@@ -208,13 +208,13 @@ export default function StartPage() {
       )}
 
       <div className="mx-auto max-w-md px-4 py-6">
-        {/* {gameStarted && (
+        {gameStarted && (
           <>
             {" "}
             <VideoSender socket={socket} roomId={roomId} />
-            <LiveViewer socket={socket} />
+            <LiveViewer socket={socket} roomId={roomId} />
           </>
-        )} */}
+        )}
 
         <PlayersPanel
           players={players}
